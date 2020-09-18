@@ -1,7 +1,6 @@
 import urllib.request
 import re
 import os
-from bs4 import BeautifulSoup
 import random
 import requests
 import json
@@ -26,10 +25,11 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou = 40472
-for i in range(1,101):
+cou = 1
+for i in range(1, 101):
     # url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
-    url = "https://api2.paixin.com/medias/1/search?page="+str(i)+"&size=80"
+    # url = "https://api2.paixin.com/medias/1/search?page=" + str(i) + "&size=80&type=similar"
+    url = "https://api2.paixin.com/medias/1/159961172/related?page=" + str(i) + "&size=80&type=similar"
     data = requests.get(url, headers=header).json()
     imgurl = data['elements']
     for x in imgurl:
@@ -38,12 +38,15 @@ for i in range(1,101):
         opener.addheaders = random.choice(my_headers)
         req = urllib.request.urlopen(imgurll)
         data = req.read()
-        outputpath = 'E:\px_smoke\smoke11_'+ str(cou) +'.jpg'
+        file_path = 'E:\paixin6'
+        if not os.path.exists(file_path):
+            os.mkdir(file_path)
+        outputpath = file_path + '\smoke_16_' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1
             continue
-        f = open(outputpath,'wb')
+        f = open(outputpath, 'wb')
         f.write(data)
         print(outputpath + '\n' + 'ok')
         f.close

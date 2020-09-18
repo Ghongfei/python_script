@@ -44,7 +44,7 @@ def download():
                 video_name[0] = video_name[0].replace(s, '')
         # 下载视频
         print('正在下载视频%s' % video_name)
-        path = r'E:\监控吸烟'
+        path = r'E:\建筑工人干活'
         if not os.path.exists(path):
             os.mkdir(path)
         filepath = path + "\%s" % video_name[0] + '.mp4'

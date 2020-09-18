@@ -1,12 +1,10 @@
-import you_get
-import os
+import re
 import urllib.request
-from bs4 import BeautifulSoup
-import time
 import random
+import json
+import requests
+import os
 
-
-header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'}
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -21,36 +19,35 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 ',
     'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.34 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.34'
 ]
-urlList = []
-def getMp4(path,urlList):
-    cmd_list = []
-    for url in urlList:
-        cmds = 'you-get -o %s --playlist %s'%(path,url)
-        cmd_list.append(cmds)
-    for count,each in enumerate(cmd_list):
-        print("正在下载第%s个视频，一共有%s个视频"%(count+1,len(cmd_list)))
-        os.system(each)
-        
-def make_page():
-    for p in range(31,98):
-        if p % 8 == 0:
-            time.sleep(random.random()*3)
 
-        url = "https://www.bilibili.com/video/BV1xs411Q799?p=" + str(p)
-        # req = urllib.request.Request(url, headers=header)
-        # page=urllib.request.urlopen(req)
-        # data = page.read()
-        # data = data.decode('utf-8','ignore')
-        # soup = BeautifulSoup(data,features="lxml")
-        # for link in soup.select('.video-item'):
-        #     +links = 'https:'+ link.a['href']
-        urlList.append(url)
-if __name__ == '__main__':
-    print('正在获取视频链接')
-    make_page()
-    path = "E:\监控打架"
-    if not os.path.exists(path):
-        os.mkdir(path)
-    print(urlList)
-    getMp4(path,urlList)
+f = open('../爬虫/梨视频.txt', encoding ="utf-8")
+data = f.read()
+video = re.findall('<a href="(.*?)" class="actplay" target="_blank">', data)
 
+for i in range(len(video)):
+    url = 'https://www.pearvideo.com/' + video[i]
+    req1 = urllib.request.Request(url, headers={'User-Agent': random.choice(my_headers)})
+    page1 = urllib.request.urlopen(req1)
+    data1 = page1.read()
+    data1 = data1.decode('utf-8', 'ignore')
+    try:
+        mp4v = re.findall('srcUrl="(.*?)",vdoUrl', data1)[0]
+        title = re.findall('<title>(.*?)</title>', data1)[0][:-17]
+    except:
+        continue
+
+    video_response = requests.get(mp4v)
+    video_3 = video_response.content
+    if os.path.exists("E:/打架视频3/%s.mp4" % title):
+        print('error')
+        continue
+    else:
+        try:
+            with open("E:/打架视频3/%s.mp4" % title, 'wb') as fw:
+                fw.write(video_3)
+                print("%s.mp4" % title + "ok")
+                fw.flush()
+        except:
+            continue
+
+f.close()

@@ -5,7 +5,7 @@ import requests
 # 路径
 BASE_URL = r'E:\360jpg'
 # 关键词
-NAME = '抽烟'
+NAME = '施工工人干活'
 
 
 class PictureDownload(object):
@@ -38,7 +38,12 @@ class PictureDownload(object):
     def save_image(self, image_list):
         # 保存图片
         for item in image_list:
-            response = requests.get(item['thumb'], headers=self.headers)
+
+            try:
+                response = requests.get(item['thumb'], headers=self.headers)
+            except Exception as e:
+                print(e)
+                return False
             path = os.path.join(BASE_URL, '%s\%s.jpg' % (self.q, item['index']))
             with open(path, 'wb') as f:
                 f.write(response.content)

@@ -62,6 +62,9 @@ def getImg(dataList, localPath):
  
 if __name__ == '__main__':
     # 参数1:关键字，参数2:要下载的页数
-    dataList = getManyPages('外国小朋友郊游',20)
+    dataList = getManyPages('人脸',20)
     # 参数2:指定保存的路径
-    getImg(dataList,f'E:\小孩子图片\\')
+    path = r'E:\人脸'
+    if not os.path.exists(path):
+        os.mkdir(path)
+    getImg(dataList, path)

@@ -22,7 +22,7 @@ my_headers = [
 ]
 cou = 36297
 root = 'E:\html'
-htmlf=open('D:/pig/html/a30.html','r',encoding="utf-8")
+htmlf=open('E:/pig/html/a30.html','r',encoding="utf-8")
 htmlcont=htmlf.read()
 htmlcont = htmlcont.replace('\n', '')
 htmlcont = htmlcont.replace('\r', '')

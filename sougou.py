@@ -39,8 +39,8 @@ def pullImgfFromSoGou(category, num, path):
 
 
 if __name__ == '__main__':
-    path = f'E:/抽烟人/'
+    path = f'E:/人的脸/'
     if not os.path.exists(path):
         os.mkdir(path)
-    pullImgfFromSoGou('抽烟的人', 2000, path)
+    pullImgfFromSoGou('人的脸', 2000, path)
 

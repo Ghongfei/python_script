@@ -1,9 +1,7 @@
-import urllib.request
-import re
 import os
-from bs4 import BeautifulSoup
 import random
-import requests
+import json
+import urllib.request
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -20,13 +18,31 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou = 36297
-root = 'D:/html/html'
-htmlf=open('D:/pig/html/a30.html','r',encoding="utf-8")
-htmlcont=htmlf.read()
-htmlcont = htmlcont.replace('\n', '')
-htmlcont = htmlcont.replace('\r', '')
-k3 = re.refindall(r'image: "(.*?)"mediaType:', htmlcont)
-for k in k3:
-    print(k)
-print(k3)
+json_path = 'E:/抽烟/cool.json'
+
+cou =135
+#for i in os.listdir(json_path):
+
+f = open(json_path, encoding='utf-8')
+res = f.read()
+
+imgurl = json.loads(res)['data']['data']
+
+for x in imgurl:
+    imgurll = x['preview260_url']
+    print(imgurll)
+    opener = urllib.request.build_opener()
+    opener.addheaders = random.choice(my_headers)
+    req = urllib.request.urlopen(imgurll)
+    data = req.read()
+
+    outputpath = 'E:/抽烟/抽烟8/p_smoke8'+str(cou) +'.jpg'
+    if os.path.exists(outputpath):
+        print('image already exit')
+        cou += 1
+        continue
+    f = open(outputpath, 'wb')
+    f.write(data)
+    print(outputpath + ' ' + 'ok')
+    f.close
+    cou += 1

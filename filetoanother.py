@@ -1,11 +1,11 @@
 import os
 import shutil
 
-path_txt = r"E:\hongfei\smoking\吸烟手势\labels"
+path_txt = r"E:\hongfei\Smoke\datatset\dataset2\test_labels"
 filelist = os.listdir(path_txt)
-path1 = r"E:\hongfei\smoking\吸烟手势\JPEGImages"
+path1 = r"E:\hongfei\Smoke\datatset\dataset2\test_bad_img_2"
 filelist2 = os.listdir(path1)
-path2 = r"E:\hongfei\smoking\吸烟手势\bad"
+path2 = r"E:\hongfei\Smoke\datatset\dataset2\test_bad_img_2"
 
 for files in filelist:
     filename0 = os.path.splitext(files)[0]

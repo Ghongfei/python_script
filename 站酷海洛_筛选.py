@@ -1,9 +1,7 @@
-import urllib.request
-import re
 import os
-from bs4 import BeautifulSoup
 import random
-import requests
+import urllib.request
+from bs4 import BeautifulSoup
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -20,48 +18,23 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou = 40472
-root = 'D:/html/html'
-# for file in os.listdir(root):
-#     file = root + '/' + file
-#     soup = BeautifulSoup(open(file, encoding='UTF-8'),features='lxml')
-#     for imgs in soup.select('.item_img'):
-#         imgslink = 'https:' + imgs['src']
-#         #print(imgslink)
-#
-#         opener = urllib.request.build_opener()
-#         opener.addheaders = random.choice(my_headers)
-#         req = urllib.request.urlopen(imgslink)
-#         data = req.read()
-#
-#         outputpath = 'D:/pig/pig_'+ str(cou) +'.jpg'
-#         if os.path.exists(outputpath):
-#             print('image already exit')
-#             cou += 1
-#             continue
-#         f = open(outputpath,'wb')
-#         f.write(data)
-#         print(outputpath + '\n' + 'ok')
-#         f.close
-#         cou += 1
-# https://api2.paixin.com/medias/1/44738077/related?page=1&size=40&type=similar
-for i in range(1,101):
-    url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
-    data = requests.get(url).json()
-    imgurl = data['elements']
-    for x in imgurl:
-        imgurll = 'https:' + x['thumb']
+cou = 24571
+soup = BeautifulSoup(open('E:/抽烟/imggggg.txt', encoding='utf-8'), features="lxml")
+for imgspan in soup.select('.sc-iwsKbI'):
+    for imglist in imgspan.a:
+        imgurl = imglist.get("data-src")
         opener = urllib.request.build_opener()
         opener.addheaders = random.choice(my_headers)
-        req = urllib.request.urlopen(imgurll)
+        req = urllib.request.urlopen(imgurl)
         data = req.read()
-        outputpath = 'D:/pig/pig_'+ str(cou) +'.jpg'
+
+        outputpath = 'E:/抽烟/抽烟8/p_smoke8' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1
             continue
-        f = open(outputpath,'wb')
+        f = open(outputpath, 'wb')
         f.write(data)
-        print(outputpath + '\n' + 'ok')
+        print(outputpath + ' ' + 'ok')
         f.close
         cou += 1

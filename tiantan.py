@@ -19,9 +19,9 @@ my_headers = [
     'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.34 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.34'
 ]
 for i in range(1, 15):
-    mainPage = 'https://www.ivsky.com/search.php?q=%E5%90%B8%E7%83%9F/index_'+str(i)+'.html'
+    mainPage = 'https://www.ivsky.com/search.php?q=%E6%88%B4%E5%AE%89%E5%85%A8%E5%B8%BD%E7%9A%84%E5%B7%A5%E4%BA%BA/index_'+str(i)+'.html'
     if i == 1:
-        mainPage = 'https://www.ivsky.com/search.php?q=%E5%90%B8%E7%83%9F'
+        mainPage = 'https://www.ivsky.com/search.php?q=%E6%88%B4%E5%AE%89%E5%85%A8%E5%B8%BD%E7%9A%84%E5%B7%A5%E4%BA%BA'
     r = requests.get(mainPage)
     src = r.text
     soup = BeautifulSoup(src, 'html.parser')

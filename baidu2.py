@@ -12,6 +12,10 @@ str_table = {
     'AzdH3F': '/'
 }
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+}
+
 char_table = {
     'w': 'a',
     'k': 'b',
@@ -107,13 +111,13 @@ if __name__ == '__main__':
 
     word = input("请输入你要下载的图片关键词：\n")
     word = str(word)
-    dirpath = mkDir(f"E:\霸气抽烟壁纸")
+    dirpath = mkDir(f"E:\独自吸烟")
 
     urls = buildUrls(word)
     index = 0
     for url in urls:
         print("正在请求：", url)
-        html = requests.get(url, timeout=10).content.decode('utf-8')
+        html = requests.get(url, headers=headers, timeout=10).content.decode('utf-8')
         imgUrls = resolveImgUrl(html)
         if len(imgUrls) == 0:  # 没有图片则结束
             break
