@@ -13,9 +13,12 @@ header = {
 url = "https://cn.bing.com/images/async?q={0}&first={1}&count={2}&scenario=ImageBasicHover&datsrc=N_I&layout=ColumnBased&mmasync=1&dgState=c*9_y*2226s2180s2072s2043s2292s2295s2079s2203s2094_i*71_w*198&IG=0D6AD6CBAF43430EA716510A4754C951&SFX={3}&iid=images.5599"
 
 # 需要爬取的图片关键词
-name = "人脸"
+name = "人脸图片"
 # 本地存储路径
-path = "E:\\" + name
+path_b = "E:\\biying\\"
+if not os.path.exists(path_b):
+    os.mkdir(path_b)
+path =  path_b + name
 
 
 '''获取缩略图列表页'''

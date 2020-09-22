@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     word = input("请输入你要下载的图片关键词：\n")
     word = str(word)
-    dirpath = mkDir(f"E:\独自吸烟")
+    dirpath = mkDir(f"E:\人脸图片")
 
     urls = buildUrls(word)
     index = 0
