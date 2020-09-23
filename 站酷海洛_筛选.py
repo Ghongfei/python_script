@@ -19,7 +19,7 @@ my_headers = [
 
 ]
 cou = 24571
-soup = BeautifulSoup(open('E:/抽烟/imggggg.txt', encoding='utf-8'), features="lxml")
+soup = BeautifulSoup(open('E:\d.txt', encoding='utf-8'), features="lxml")
 for imgspan in soup.select('.sc-iwsKbI'):
     for imglist in imgspan.a:
         imgurl = imglist.get("data-src")
@@ -27,8 +27,10 @@ for imgspan in soup.select('.sc-iwsKbI'):
         opener.addheaders = random.choice(my_headers)
         req = urllib.request.urlopen(imgurl)
         data = req.read()
-
-        outputpath = 'E:/抽烟/抽烟8/p_smoke8' + str(cou) + '.jpg'
+        out_path = r'E:\zhanku\抽烟'
+        if not os.path.exists(out_path):
+            os.mkdir(out_path)
+        outputpath = '\smoke00_' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1

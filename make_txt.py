@@ -1,6 +1,6 @@
 import os
 
-path = r"E:\hongfei\Smoke\抽烟图片负样本"
+path = r"E:\hongfei\Smoke\人脸图片负样本"
 file_list = os.listdir(path)
 
 for file in file_list:
@@ -8,7 +8,7 @@ for file in file_list:
 
     filename = os.path.splitext(file)[0]
     file_type = os.path.splitext(file)[1]
-    new_path = r"E:\hongfei\Smoke\抽烟图片负样本label"
+    new_path = r"E:\hongfei\Smoke\人脸图片负样本"
     if not os.path.exists(new_path):
         os.mkdir(new_path)
     txt_name = filename + '.txt'

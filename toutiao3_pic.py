@@ -9,14 +9,14 @@ import os
 import sys
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
-    , 'Accept': 'application/json, text/javascript'
-    , 'Host': 'www.toutiao.com'
-    , 'Connection': 'keep-alive'
-    , 'Accept-Encoding': 'gzip, deflate'
-    , 'Accept-Language': 'zh-CN,zh;q=0.8'
-    , 'Upgrade-Insecure-Requests': '1'
-    , 'Referer': 'http://www.toutiao.com/search/'
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+    'Accept': 'application/json, text/javascript',
+    'Host': 'www.toutiao.com',
+    'Connection': 'keep-alive',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'zh-CN,zh;q=0.8',
+    'Upgrade-Insecure-Requests': '1',
+    'Referer': 'http://www.toutiao.com/search/'
 }
 
 url = 'http://www.toutiao.com/search_content/?offset={}&format=json&keyword={}&autoload=true&count=20&cur_tab=3'
@@ -29,7 +29,8 @@ for i in range(0, 10):  # 爬取前100条链接
     urllist.append(url.format(i, name))
 
 path = r'E:\picture'
-
+if not os.path.exists(path):
+    os.mkdir(path)
 
 def Schedule(a, b, c):  # 显示下载进度
     '''''
