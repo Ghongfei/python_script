@@ -2,6 +2,7 @@ import os
 import random
 import json
 import urllib.request
+
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -18,10 +19,11 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-json_path = 'E:/抽烟/cool.json'
 
-cou =135
-#for i in os.listdir(json_path):
+json_path = r'E:\zhanku\cool\cool.json'
+
+cou = 1
+# for i in os.listdir(json_path):
 
 f = open(json_path, encoding='utf-8')
 res = f.read()
@@ -36,7 +38,10 @@ for x in imgurl:
     req = urllib.request.urlopen(imgurll)
     data = req.read()
 
-    outputpath = 'E:/抽烟/抽烟8/p_smoke8'+str(cou) +'.jpg'
+    path = r'E:\zhanku\斧头'
+    if not os.path.exists(path):
+        os.mkdir(path)
+    outputpath = path + '\d_10_' + str(cou) + '.jpg'
     if os.path.exists(outputpath):
         print('image already exit')
         cou += 1

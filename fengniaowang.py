@@ -46,8 +46,8 @@ async def x_get_source(url):
 
 if __name__=="__main__":
     # url_format = "https://tu.fengniao.com/ajax/ajaxTuPicList.php?page={}&tagsId=15&action=getPicLists"
-    url_format = 'https://www.veer.com/ajax/search?phrase=%E6%8A%BD%E7%83%9F&page={}'
-    full_urllist = [url_format.format(i) for i in range(1, 100)]
+    url_format = 'https://www.veer.com/ajax/search?phrase=%E5%88%80&page={}'
+    full_urllist = [url_format.format(i) for i in range(1, 200)]
     event_loop = asyncio.get_event_loop()  # 创建事件循环
     tasks = [x_get_source(url) for url in full_urllist]
     results = event_loop.run_until_complete(asyncio.wait(tasks))  # 等待任务结束

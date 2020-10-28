@@ -21,7 +21,7 @@ def make_page():
         if p % 8 == 0:
             time.sleep(random.random()*3)
 
-        url = "https://search.bilibili.com/all?keyword=%E5%90%B8%E7%83%9F&page=" + str(p)
+        url = "https://search.bilibili.com/all?keyword=%E5%88%80%E8%88%9E&page=" + str(p)
         req = urllib.request.Request(url, headers=header)
         page = urllib.request.urlopen(req)
         data = page.read()
@@ -33,7 +33,7 @@ def make_page():
 if __name__ == '__main__':
     print('正在获取视频链接')
     make_page()
-    path = "E:\监控吸烟"
+    path = "E:\\bilibili\\刀舞"
     if not os.path.exists(path):
         os.mkdir(path)
     getMp4(path,urlList)

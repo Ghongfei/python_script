@@ -21,8 +21,8 @@ my_headers = [
 ]
 v_list = []
 
-for i in range(3, 1000):
-    url = 'http://haokan.baidu.com/videoui/page/search?pn='+ str(i) +'&rn=10&_format=json&tab=video&query=%E7%BE%A4%E6%AE%B4'
+for i in range(1, 1000):
+    url = 'http://haokan.baidu.com/videoui/page/search?pn='+ str(i) +'&rn=10&_format=json&tab=video&query=%E8%8F%9C%E5%88%80%E5%8A%AB%E6%8C%81'
     req = urllib.request.Request(url, headers={'User-Agent': random.choice(my_headers)})
     page = urllib.request.urlopen(req)
     data = page.read()
@@ -45,11 +45,14 @@ for i in range(3, 1000):
             continue
         video_response = requests.get(video)
         video_3 = video_response.content
-        if os.path.exists("E:/打架视频4/%s.mp4" % title):
+        path = r'E:\haokan\菜刀劫持'
+        if not os.path.exists(path):
+            os.mkdir(path)
+        if os.path.exists(path + "\%s.mp4" % title):
             print('error')
             continue
         else:
-            with open("E:/打架视频4/%s.mp4" % title, 'wb') as fw:
+            with open(path + "\%s.mp4" % title, 'wb') as fw:
                 fw.write(video_3)
                 print("%s.mp4" % title + "ok")
                 fw.flush()

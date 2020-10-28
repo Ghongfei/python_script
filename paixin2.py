@@ -29,25 +29,28 @@ cou = 1
 for i in range(1, 101):
     # url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
     # url = "https://api2.paixin.com/medias/1/search?page=" + str(i) + "&size=80&type=similar"
-    url = "https://api2.paixin.com/medias/1/159961172/related?page=" + str(i) + "&size=80&type=similar"
+    url = "https://api2.paixin.com/medias/1/192439278/related?page=" + str(i) + "&size=80&type=similar"
     data = requests.get(url, headers=header).json()
     imgurl = data['elements']
     for x in imgurl:
         imgurll = 'https:' + x['thumb']
         opener = urllib.request.build_opener()
         opener.addheaders = random.choice(my_headers)
-        req = urllib.request.urlopen(imgurll)
+        try:
+            req = urllib.request.urlopen(imgurll)
+        except:
+            print("error")
         data = req.read()
-        file_path = 'E:\paixin6'
+        file_path = 'E:\paixin\手拿奖杯'
         if not os.path.exists(file_path):
             os.mkdir(file_path)
-        outputpath = file_path + '\smoke_16_' + str(cou) + '.jpg'
+        outputpath = file_path + '\\knife_paixin_negative06_' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1
             continue
         f = open(outputpath, 'wb')
         f.write(data)
-        print(outputpath + '\n' + 'ok')
+        print(outputpath)
         f.close
         cou += 1

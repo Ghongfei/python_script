@@ -1,7 +1,26 @@
+# import urllib
+# import urllib.request
+#
+# def get_image(url,stuNum):
+#     try:
+#         request = urllib.request.Request(url)
+#         response = urllib.request.urlopen(request)
+#         get_img = response.read()
+#         with open('E:\stuphoto'+ str(stuNum) +'\.jpg','wb') as fp:
+#             fp.write(get_img)
+#             print('图片下载完成')
+#     except:
+#         print('访问空')
+#
+# stuNum = 1
+# url = ''
+# for i in range(500):
+#     stuNum = stuNum+1
+#     get_image(url+str(stuNum)+'.jpg',stuNum)
+
 import os
-import random
-import urllib.request
-from bs4 import BeautifulSoup
+import requests
+
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -18,29 +37,30 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou = 1
-soup = BeautifulSoup(open('E:\zhanku\d.txt', encoding='utf-8'), features="lxml")
-# print(soup.select('.sc-1pzp068-1'))
-for imgspan in soup.select('.sc-1pzp068-1'):
-    for imglist in imgspan.a:
-        imgurl = imglist.get("data-src")
-        opener = urllib.request.build_opener()
-        opener.addheaders = random.choice(my_headers)
-        req = urllib.request.urlopen(imgurl)
-        data = req.read()
-        out_path = r'E:\zhanku\手拿筷子'
-        if not os.path.exists(out_path):
-            os.mkdir(out_path)
-        outputpath = out_path + '\\knife_zhanku_negative07_' + str(cou) + '.jpg'
-        if os.path.exists(outputpath):
-            print('image already exit')
-            cou += 1
-            continue
-        f = open(outputpath, 'wb')
-        try:
-            f.write(data)
-        except:
-            print("error!")
-        print(outputpath + ' ' + 'ok')
-        f.close
-        cou += 1
+
+f = open(r"E:\url.txt", "r", encoding='UTF-8')
+lines = f.readlines()  # 读取全部内容
+
+path = r"E:\urls"
+
+if not os.path.exists(path):
+    os.mkdir(path)
+
+index = 1
+for a in lines:
+    a = a.strip()
+    a = a.replace("http", "https")
+    print(a)
+
+    # urllib.request.urlretrieve(a, path)
+
+    try:
+        res = requests.get(a)
+        with open(path + '\\' + str(index) + ".jpg", "wb") as f:
+            f.write(res.content)
+        index += 1
+        print("下载成功,第 %s 张图片！" % index)
+    except:
+        print("地址有错!")
+
+f.close()

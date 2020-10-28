@@ -42,7 +42,7 @@ def get_dowmurl(data):
 #  保存视频
 def save_mp4(mp4_name, mp4_url):
     print("正在保存: {}".format(mp4_name))
-    path = r'E:\Users'
+    path = r'E:\haokan'
     if not os.path.exists(path):
         os.mkdir(path)
     path_d = path + '\{}.mp4'.format(mp4_name)
@@ -54,7 +54,7 @@ def save_mp4(mp4_name, mp4_url):
 # 主函数
 def main(page):
     n = page * 20
-    url = 'https://haokan.baidu.com/videoui/page/search?pn={}&rn=10&_format=json&tab=video&query=%E6%8A%BD%E7%83%9F'.format(n)
+    url = 'https://haokan.baidu.com/videoui/page/search?pn={}&rn=10&_format=json&tab=video&query=%E6%8B%BF%E6%9E%AA'.format(n)
     data = get_html(url)
     mp4_mess = get_dowmurl(data)
     for mp4_name, mp4_url in mp4_mess:

@@ -13,7 +13,7 @@ header = {
 url = "https://cn.bing.com/images/async?q={0}&first={1}&count={2}&scenario=ImageBasicHover&datsrc=N_I&layout=ColumnBased&mmasync=1&dgState=c*9_y*2226s2180s2072s2043s2292s2295s2079s2203s2094_i*71_w*198&IG=0D6AD6CBAF43430EA716510A4754C951&SFX={3}&iid=images.5599"
 
 # 需要爬取的图片关键词
-name = "证件照"
+name = "手握酒瓶"
 # 本地存储路径
 path_b = "E:\\biying\\"
 if not os.path.exists(path_b):
@@ -50,7 +50,7 @@ def findImgUrlFromHtml(html, rule, url, key, first, loadNum, sfx, count):
 def getImage(url, count):
     try:
         time.sleep(0.5)
-        urllib.request.urlretrieve(url, path + '\\' + str(count + 1) + '.jpg')
+        urllib.request.urlretrieve(url, path + '\\' + "knife_bying_negative05_" + str(count + 1) + '.jpg')
     except Exception:
         time.sleep(1)
         print("产生了一点点错误，跳过...")

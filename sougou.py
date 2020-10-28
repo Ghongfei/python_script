@@ -25,7 +25,7 @@ def pullImgfFromSoGou(category, num, path):
         for img_url in imgs_url:
             print(' '+str(count)+'.jpg '+' Downloading...')
             try:
-                urllib.request.urlretrieve(img_url, path+str(count)+'.jpg')
+                urllib.request.urlretrieve(img_url, path + '\\' + "knife_sougou_negative05_" + str(count) + '.jpg')
             # 请求时可能会出现404HttpError，或者连接重置等等异常导致程序突出，这里直接采用Exception进行处理，出现了异常只需要跳过进行下一张的下载即可
             except Exception:
                 continue
@@ -42,6 +42,9 @@ if __name__ == '__main__':
     path = 'E:\\sougou'
     if not os.path.exists(path):
         os.mkdir(path)
-    name = '抽烟人'
-    pullImgfFromSoGou(name, 2000, path + '\\' + name)
+    name = '手握'
+    path_a = path + '\\' + name
+    if not os.path.exists(path_a):
+        os.mkdir(path_a)
+    pullImgfFromSoGou(name, 2000, path_a)
 

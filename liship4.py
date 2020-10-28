@@ -20,7 +20,7 @@ my_headers = [
     'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.34 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.34'
 ]
 
-f = open('../爬虫/梨视频.txt', encoding ="utf-8")
+f = open('html1.txt', encoding ="utf-8")
 data = f.read()
 video = re.findall('<a href="(.*?)" class="actplay" target="_blank">', data)
 
@@ -36,14 +36,15 @@ for i in range(len(video)):
     except:
         continue
 
+
     video_response = requests.get(mp4v)
     video_3 = video_response.content
-    if os.path.exists("E:/打架视频3/%s.mp4" % title):
+    if os.path.exists("E:\\video\\%s.mp4" % title):
         print('error')
         continue
     else:
         try:
-            with open("E:/打架视频3/%s.mp4" % title, 'wb') as fw:
+            with open("E:\\video\\%s.mp4" % title, 'wb') as fw:
                 fw.write(video_3)
                 print("%s.mp4" % title + "ok")
                 fw.flush()
