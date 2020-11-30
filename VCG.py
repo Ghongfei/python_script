@@ -1,9 +1,13 @@
 import urllib.request
 import re
 import os
-from bs4 import BeautifulSoup
 import random
 import requests
+import json
+
+header = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+}
 
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
@@ -21,38 +25,33 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou =4094
-shpage = ['47650291']#  21693349(25) 63584225(1)  47650291(头盔)
-for index, shpagee in enumerate(shpage):
-    for i in range(1, 5):
-        url = 'https://api2.paixin.com/medias/1/'+shpagee+'/related?page=' + str(i) + '&size=40&type=similar'
-
-        data = requests.get(url).json()
-        imgurl = data['elements']
-
-        for x in imgurl:
-
-            # userId = x['userId']
-            # picid = x['id']
-
-            # picimg = 'https://d301.paixin.com/thumbs/'+ str(userId)+'/'+str(picid)+'/staff_1024.jpg'
-            picimg = 'https:' + x['thumb']
-            opener = urllib.request.build_opener()
-            opener.addheaders = random.choice(my_headers)
-            try:
-                req = urllib.request.urlopen(picimg)
-            except:
-                continue
-            else:
-                data = req.read()
-
-            outputpath = 'E:/安全帽/安全帽9/safety_hat9' + str(cou) + '.jpg'
-            if os.path.exists(outputpath):
-                print('image already exit')
-                cou += 1
-                continue
-            f = open(outputpath, 'wb')
-            f.write(data)
-            print(outputpath)
-            f.close
+cou = 1
+for i in range(1, 101):
+    url = 'https://www.vcg.com/api/common/searchAllImage?page='+ str(i) + '&phrase=%E6%89%8B%E6%8B%BF%E5%BC%AF%E5%88%80'
+    data = requests.get(url, headers=header).json()
+    imgurl = data['list']
+    for x in imgurl:
+        try:
+            imgurll = 'https:' + x['url800']
+        except:
+            print('not url800')
+        opener = urllib.request.build_opener()
+        opener.addheaders = random.choice(my_headers)
+        try:
+            req = urllib.request.urlopen(imgurll)
+        except:
+            print("error")
+        data = req.read()
+        file_path = r'E:\Crawling\vcg\手拿弯刀'
+        if not os.path.exists(file_path):
+            os.mkdir(file_path)
+        outputpath = file_path + '\\knife_vcg_0004_' + str(cou) + '.jpg'
+        if os.path.exists(outputpath):
+            print('image already exit')
             cou += 1
+            continue
+        f = open(outputpath, 'wb')
+        f.write(data)
+        print(outputpath)
+        f.close
+        cou += 1

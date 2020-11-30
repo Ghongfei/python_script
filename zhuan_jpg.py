@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 
-root = r'E:\tenxun\锤子'
+root = r'E:\haokan\手拿弯刀'
 root_list = os.listdir(root)
 for root_name in root_list:
     rootdir = os.path.join(root, root_name)

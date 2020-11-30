@@ -30,10 +30,10 @@ urlList = []
 def getMp4(urlList):
     cmd_list = []
     for url in urlList:
-        path_a = r"E:\tenxun"
+        path_a = r"E:\Crawling\tenxun"
         if not os.path.exists(path_a):
             os.mkdir(path_a)
-        path = path_a + '\舞刀'
+        path = path_a + '\手拿战刀'
         if not os.path.exists(path):
             os.mkdir(path)
         cmds = 'you-get -o %s %s' % (path, url)
@@ -47,9 +47,9 @@ def make_page():
     for p in range(1, 21):
         if p % 8 == 0:
             time.sleep(random.random() * 3)
-        url = 'https://v.qq.com/x/search/?ses=qid%3DlaXG_2oe_wOJ-56KHv8y6YhX-dr3Q9IZ9KRA3OsHhXAWtskaz6L4lA%26last_query%3D%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91%26tabid_list%3D0%7C2%7C3%7C14%7C7%7C12%7C11%7C1%7C4%7C6%7C21%7C5%7C17%7C8%7C13%7C15%7C20%7C106%26tabname_list%3D%E5%85%A8%E9%83%A8%7C%E7%94%B5%E8%A7%86%E5%89%A7%7C%E7%BB%BC%E8%89%BA%7C%E4%BD%93%E8%82%B2%7C%E5%85%B6%E4%BB%96%7C%E5%A8%B1%E4%B9%90%7C%E6%96%B0%E9%97%BB%7C%E7%94%B5%E5%BD%B1%7C%E5%8A%A8%E6%BC%AB%7C%E7%BA%AA%E5%BD%95%E7%89%87%7C%E6%B1%BD%E8%BD%A6%7C%E9%9F%B3%E4%B9%90%7C%E6%B8%B8%E6%88%8F%7C%E5%8E%9F%E5%88%9B%7C%E8%B4%A2%E7%BB%8F%7C%E6%95%99%E8%82%B2%7C%E6%AF%8D%E5%A9%B4%7C%E5%B0%91%E5%84%BF%26resolution_tabid_list%3D0%7C1%7C2%7C3%7C4%7C5%26resolution_tabname_list%3D%E5%85%A8%E9%83%A8%7C%E6%A0%87%E6%B8%85%7C%E9%AB%98%E6%B8%85%7C%E8%B6%85%E6%B8%85%7C%E8%93%9D%E5%85%89%7CVR&q=%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91&needCorrect=%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91&stag=3&cur=' + str(p) + '&cxt=tabid%3D0%26sort%3D0%26pubfilter%3D0%26duration%3D0'
+        url = 'https://v.qq.com/x/search/?ses=qid%3Dz0L9Y4vg-MpQqGv7x207bOi1A3FnJZKW6vJ39s6VRjBakafWZ-CMuA%26last_query%3D%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80%26tabid_list%3D0%7C7%7C1%7C2%7C3%7C4%7C11%7C6%7C12%7C21%7C14%7C5%7C17%7C10%7C13%7C15%7C106%26tabname_list%3D%E5%85%A8%E9%83%A8%7C%E5%85%B6%E4%BB%96%7C%E7%94%B5%E5%BD%B1%7C%E7%94%B5%E8%A7%86%E5%89%A7%7C%E7%BB%BC%E8%89%BA%7C%E5%8A%A8%E6%BC%AB%7C%E6%96%B0%E9%97%BB%7C%E7%BA%AA%E5%BD%95%E7%89%87%7C%E5%A8%B1%E4%B9%90%7C%E6%B1%BD%E8%BD%A6%7C%E4%BD%93%E8%82%B2%7C%E9%9F%B3%E4%B9%90%7C%E6%B8%B8%E6%88%8F%7C%E6%8B%8D%E5%AE%A2%7C%E8%B4%A2%E7%BB%8F%7C%E6%95%99%E8%82%B2%7C%E5%B0%91%E5%84%BF%26resolution_tabid_list%3D0%7C1%7C2%7C3%7C4%7C5%26resolution_tabname_list%3D%E5%85%A8%E9%83%A8%7C%E6%A0%87%E6%B8%85%7C%E9%AB%98%E6%B8%85%7C%E8%B6%85%E6%B8%85%7C%E8%93%9D%E5%85%89%7CVR&q=%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80&needCorrect=%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80&stag=3&cur=' + str(p) + '&cxt=tabid%3D0%26sort%3D0%26pubfilter%3D0%26duration%3D0'
         if p == 1:
-            url = "https://v.qq.com/x/search/?ses=qid%3DlaXG_2oe_wOJ-56KHv8y6YhX-dr3Q9IZ9KRA3OsHhXAWtskaz6L4lA%26last_query%3D%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91%26tabid_list%3D0%7C2%7C3%7C14%7C7%7C12%7C11%7C1%7C4%7C6%7C21%7C5%7C17%7C8%7C13%7C15%7C20%7C106%26tabname_list%3D%E5%85%A8%E9%83%A8%7C%E7%94%B5%E8%A7%86%E5%89%A7%7C%E7%BB%BC%E8%89%BA%7C%E4%BD%93%E8%82%B2%7C%E5%85%B6%E4%BB%96%7C%E5%A8%B1%E4%B9%90%7C%E6%96%B0%E9%97%BB%7C%E7%94%B5%E5%BD%B1%7C%E5%8A%A8%E6%BC%AB%7C%E7%BA%AA%E5%BD%95%E7%89%87%7C%E6%B1%BD%E8%BD%A6%7C%E9%9F%B3%E4%B9%90%7C%E6%B8%B8%E6%88%8F%7C%E5%8E%9F%E5%88%9B%7C%E8%B4%A2%E7%BB%8F%7C%E6%95%99%E8%82%B2%7C%E6%AF%8D%E5%A9%B4%7C%E5%B0%91%E5%84%BF%26resolution_tabid_list%3D0%7C1%7C2%7C3%7C4%7C5%26resolution_tabname_list%3D%E5%85%A8%E9%83%A8%7C%E6%A0%87%E6%B8%85%7C%E9%AB%98%E6%B8%85%7C%E8%B6%85%E6%B8%85%7C%E8%93%9D%E5%85%89%7CVR&q=%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91&needCorrect=%E8%88%9E%E5%88%80%E5%BC%84%E5%89%91&stag=3&cur=1&cxt=tabid%3D0%26sort%3D0%26pubfilter%3D0%26duration%3D0"
+            url = 'https://v.qq.com/x/search/?ses=qid%3Dz0L9Y4vg-MpQqGv7x207bOi1A3FnJZKW6vJ39s6VRjBakafWZ-CMuA%26last_query%3D%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80%26tabid_list%3D0%7C7%7C1%7C2%7C3%7C4%7C11%7C6%7C12%7C21%7C14%7C5%7C17%7C10%7C13%7C15%7C106%26tabname_list%3D%E5%85%A8%E9%83%A8%7C%E5%85%B6%E4%BB%96%7C%E7%94%B5%E5%BD%B1%7C%E7%94%B5%E8%A7%86%E5%89%A7%7C%E7%BB%BC%E8%89%BA%7C%E5%8A%A8%E6%BC%AB%7C%E6%96%B0%E9%97%BB%7C%E7%BA%AA%E5%BD%95%E7%89%87%7C%E5%A8%B1%E4%B9%90%7C%E6%B1%BD%E8%BD%A6%7C%E4%BD%93%E8%82%B2%7C%E9%9F%B3%E4%B9%90%7C%E6%B8%B8%E6%88%8F%7C%E6%8B%8D%E5%AE%A2%7C%E8%B4%A2%E7%BB%8F%7C%E6%95%99%E8%82%B2%7C%E5%B0%91%E5%84%BF%26resolution_tabid_list%3D0%7C1%7C2%7C3%7C4%7C5%26resolution_tabname_list%3D%E5%85%A8%E9%83%A8%7C%E6%A0%87%E6%B8%85%7C%E9%AB%98%E6%B8%85%7C%E8%B6%85%E6%B8%85%7C%E8%93%9D%E5%85%89%7CVR&q=%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80&needCorrect=%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80&stag=3&cur=1&cxt=tabid%3D0%26sort%3D0%26pubfilter%3D0%26duration%3D0'
         req = urllib.request.Request(url, headers={'User-Agent': random.choice(my_headers)})
         page = urllib.request.urlopen(req)
         data = page.read()

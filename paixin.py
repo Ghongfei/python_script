@@ -1,9 +1,14 @@
 import urllib.request
 import re
 import os
-from bs4 import BeautifulSoup
 import random
 import requests
+import json
+
+header = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+}
+
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
@@ -20,13 +25,32 @@ my_headers = [
     'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 '
 
 ]
-cou = 36297
-root = 'E:\html'
-htmlf=open('E:/pig/html/a30.html','r',encoding="utf-8")
-htmlcont=htmlf.read()
-htmlcont = htmlcont.replace('\n', '')
-htmlcont = htmlcont.replace('\r', '')
-k3 = re.refindall(r'image: "(.*?)"mediaType:', htmlcont)
-for k in k3:
-    print(k)
-print(k3)
+cou = 1
+for i in range(1, 101):
+    # url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
+    # url = "https://api2.paixin.com/medias/1/search?page=" + str(i) + "&size=80&type=similar"
+    url = "https://api2.paixin.com/medias/1/292520682/related?page=" + str(i) + "&size=80&type=similar"
+    data = requests.get(url, headers=header).json()
+    imgurl = data['elements']
+    for x in imgurl:
+        imgurll = 'https:' + x['thumb']
+        opener = urllib.request.build_opener()
+        opener.addheaders = random.choice(my_headers)
+        try:
+            req = urllib.request.urlopen(imgurll)
+        except:
+            print("error")
+        data = req.read()
+        file_path = 'E:\Crawling\paixin\穿反光衣4'
+        if not os.path.exists(file_path):
+            os.mkdir(file_path)
+        outputpath = file_path + '\\reflective_clothing_paixin_0005_' + str(cou) + '.jpg'
+        if os.path.exists(outputpath):
+            print('image already exit')
+            cou += 1
+            continue
+        f = open(outputpath, 'wb')
+        f.write(data)
+        print(outputpath)
+        f.close
+        cou += 1

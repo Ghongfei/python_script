@@ -33,8 +33,7 @@ def make_page():
 if __name__ == '__main__':
     print('正在获取视频链接')
     make_page()
-    path = "E:\\bilibili\\刀舞"
+    path = "E:\\Crawling\\bilibili\\刀舞"
     if not os.path.exists(path):
         os.mkdir(path)
     getMp4(path,urlList)
-

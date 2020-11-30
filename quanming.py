@@ -21,38 +21,34 @@ my_headers = [
 ]
 v_list = []
 
-for i in range(1, 1000):
-    url = 'http://haokan.baidu.com/videoui/page/search?pn='+ str(i) +'&rn=10&_format=json&tab=video&query=%E6%89%8B%E6%8B%BF%E6%88%98%E5%88%80'
-    req = urllib.request.Request(url, headers={'User-Agent': random.choice(my_headers)})
-    page = urllib.request.urlopen(req)
-    data = page.read()
-    data = data.decode('utf-8', 'ignore')
-    data_json = json.loads(data)
-    videolists = data_json['data']['response']['list']
-    for v in videolists:
-        video_url = v['url']
-        print(video_url)
-        v_list.append(video_url)
-        req1 = urllib.request.Request(video_url, headers={'User-Agent': random.choice(my_headers)})
-        page1 = urllib.request.urlopen(req1)
-        data1 = page1.read()
-        data1 = data1.decode('utf-8', 'ignore')
-        try:
-            video = re.findall('<video class="video" src=(.*?)>', data1)[0]
-            title = re.findall('<h2 class="videoinfo-title">(.*?)</h2>', data1)[0]
-        except:
-            print('error')
-            continue
-        video_response = requests.get(video)
-        video_3 = video_response.content
-        path = r'E:\Crawling\haokan\手拿战刀'
+headers = {
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    }
+
+count = 1
+
+for page in range(1, 1000):
+
+    url = 'https://quanmin.baidu.com/wise/growth/api/home/searchmorelist?rn=12&pn={}&q=%E4%BA%BA%E6%8B%BF%E5%88%80&type=search&_format=json'.format(page)
+    response = requests.get(url=url, headers=headers)
+    html_data = response.json()
+    lis = html_data['data']['list']['video_list']
+    for li in lis:
+        play_url = li['play_url']
+
+        path = r"E:\Crawling\quanming"
         if not os.path.exists(path):
             os.mkdir(path)
-        if os.path.exists(path + "\%s.mp4" % title):
-            print('error')
-            continue
-        else:
-            with open(path + "\%s.mp4" % title, 'wb') as fw:
-                fw.write(video_3)
-                print("%s.mp4" % title + "ok")
-                fw.flush()
+
+        filename = path + "\\" + "knife_quanming_8_" + str(count) + '.mp4'
+        response_2 = requests.get(url=play_url, headers=headers)
+
+        with open(filename, mode='wb') as f:
+            try:
+                f.write(response_2.content)
+            except:
+                print('error')
+            print("下载中：")
+            print(play_url)
+
+        count += 1

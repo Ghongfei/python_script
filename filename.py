@@ -1,6 +1,6 @@
 import os
 
-path = r"E:\bilibili\刀舞"
+path = r"E:\HONGFEI\arms\clothing\reflective_clothing_out\JPEGImages"
 file_list = os.listdir(path)
 count = 0
 for file in file_list:
@@ -8,7 +8,7 @@ for file in file_list:
     filename = os.path.splitext(file)[0]  # 文件名
     file_type = os.path.splitext(file)[1]  # 文件扩展名
     # 用字符串函数zfill 以0补全所需位数
-    new_path = os.path.join(path, 'knife_bili131_' + str(count).zfill(4) + file_type)
+    new_path = os.path.join(path, 'reflect_light_clothing_0000_' + str(count).zfill(4) + file_type)
     # new_path = os.path.join(path, 'fall_c5_' + str(count).zfill(4) + file_type)
     # filename = filename.replace("knife","hammer")
     # new_path = os.path.join(path, filename + file_type)

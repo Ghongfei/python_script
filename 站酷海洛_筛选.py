@@ -19,7 +19,7 @@ my_headers = [
 
 ]
 cou = 1
-soup = BeautifulSoup(open('E:\zhanku\d.txt', encoding='utf-8'), features="lxml")
+soup = BeautifulSoup(open('E:\Crawling\zhanku\d.txt', encoding='utf-8'), features="lxml")
 # print(soup.select('.sc-1pzp068-1'))
 for imgspan in soup.select('.sc-1pzp068-1'):
     for imglist in imgspan.a:
@@ -28,10 +28,10 @@ for imgspan in soup.select('.sc-1pzp068-1'):
         opener.addheaders = random.choice(my_headers)
         req = urllib.request.urlopen(imgurl)
         data = req.read()
-        out_path = r'E:\zhanku\手拿筷子'
+        out_path = r'E:\Crawling\zhanku\反光衣'
         if not os.path.exists(out_path):
             os.mkdir(out_path)
-        outputpath = out_path + '\\knife_zhanku_negative07_' + str(cou) + '.jpg'
+        outputpath = out_path + '\\reflective_clothing_zhanku_01_' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1

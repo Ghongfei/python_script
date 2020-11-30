@@ -3,9 +3,9 @@ import os
 import requests
 
 # 路径
-BASE_URL = r'E:\360jpg'
+BASE_URL = r'E:\Crawling\360jpg'
 # 关键词
-NAME = '手握酒瓶'
+NAME = '穿反光衣'
 
 
 class PictureDownload(object):
@@ -44,7 +44,7 @@ class PictureDownload(object):
             except Exception as e:
                 print(e)
                 return False
-            path = os.path.join(BASE_URL, '%s\\knife_360_negative04_%s.jpg' % (self.q, item['index']))
+            path = os.path.join(BASE_URL, '%s\\reflective_clothing_360_01_%s.jpg' % (self.q, item['index']))
             with open(path, 'wb') as f:
                 f.write(response.content)
                 print("**** %d 图片 **** - 已下载！" % (item['index']))

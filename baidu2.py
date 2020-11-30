@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     word = input("请输入你要下载的图片关键词：\n")
     word = str(word)
-    dirpath = mkDir(r"E:\baidu\手握矿泉水瓶")
+    dirpath = mkDir(r"E:\Crawling\baidu\工地反光衣")
 
     urls = buildUrls(word)
     index = 0
@@ -122,6 +122,6 @@ if __name__ == '__main__':
         if len(imgUrls) == 0:  # 没有图片则结束
             break
         for url in imgUrls:
-            if downImg(url, dirpath, "knife_baidu_negative07_" + str(index) + ".jpg"):
+            if downImg(url, dirpath, "reflective_clothing_0002_" + str(index) + ".jpg"):
                 index += 1
                 print("已下载 %s 张" % index)

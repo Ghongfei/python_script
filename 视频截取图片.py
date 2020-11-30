@@ -2,8 +2,8 @@ import cv2
 import os
 
 name = 1
-url = r"E:\tenxun\舞刀"
-path = r"E:\tenxun\jpg"
+url = r"E:\baidu\外拍视频"
+path = r"E:\baidu\jpg"
 
 if not os.path.exists(path):
     os.makedirs(path)
@@ -22,9 +22,9 @@ for filename in os.listdir(url):
     while rel:
 
         rel, frame = cap.read()
-        if c % time == 0:
+        if (c % time == 0):
             try:
-                cv2.imwrite(path + "\\" + "knife_tenxun_11_" + str(name) + '.jpg', frame)
+                cv2.imwrite(path + "\\" + "armed_" + str(name) + '.jpg', frame)
             except:
                 print("error")
             # cv2.imwrite('E:/aa.jpg', frame)

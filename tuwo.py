@@ -27,13 +27,11 @@ my_headers = [
 ]
 cou = 1
 for i in range(1, 101):
-    # url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
-    # url = "https://api2.paixin.com/medias/1/search?page=" + str(i) + "&size=80&type=similar"
-    url = "https://api2.paixin.com/medias/1/192439278/related?page=" + str(i) + "&size=80&type=similar"
+    url = "https://twb.turawstock.com/api/photo/get_photo?label=%E6%8B%BF%E7%9D%80%E5%B0%8F%E5%88%80&kind=0&page=" + str(i)
     data = requests.get(url, headers=header).json()
-    imgurl = data['elements']
+    imgurl = data['data']['photo_list']
     for x in imgurl:
-        imgurll = 'https:' + x['thumb']
+        imgurll = x['thumb_w_url_cos']
         opener = urllib.request.build_opener()
         opener.addheaders = random.choice(my_headers)
         try:
@@ -41,10 +39,10 @@ for i in range(1, 101):
         except:
             print("error")
         data = req.read()
-        file_path = 'E:\paixin\手拿奖杯'
+        file_path = r'E:\Crawling\tuwo\拿着小刀'
         if not os.path.exists(file_path):
             os.mkdir(file_path)
-        outputpath = file_path + '\\knife_paixin_negative06_' + str(cou) + '.jpg'
+        outputpath = file_path + '\\knife_tuwo_0003_' + str(cou) + '.jpg'
         if os.path.exists(outputpath):
             print('image already exit')
             cou += 1
