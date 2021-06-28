@@ -1,0 +1,419 @@
+1615362160042	geckodriver	INFO	Listening on 127.0.0.1:2380
+1615363465885	geckodriver	INFO	Listening on 127.0.0.1:4460
+1615363468918	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileVeLKMs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615363475652	Marionette	INFO	Listening on port 4469
+1615363475859	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.warn: services.settings: main/cfr sync interrupted by shutdown
+1615363483236	Marionette	INFO	Stopped listening on port 4469
+1615363638028	geckodriver	INFO	Listening on 127.0.0.1:4631
+1615363641067	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileXCbOHp"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615363646743	Marionette	INFO	Listening on port 4640
+1615363647247	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://global/content/elements/browser-custom-element.js, line 1681: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6B0027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0117,name=PContent::Msg_AccumulateChildHistograms) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A011C,name=PContent::Msg_RecordDiscardedData) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0146,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615363650285	Marionette	INFO	Stopped listening on port 4640
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615363814634	geckodriver	INFO	Listening on 127.0.0.1:4801
+1615363817727	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileVzED9m"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615363826836	Marionette	INFO	Listening on port 4811
+1615363827207	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615363862972	Marionette	INFO	Stopped listening on port 4811
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileOk3pno"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615363857404	Marionette	INFO	Listening on port 4941
+1615363857588	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615363868617	Marionette	INFO	Stopped listening on port 4941
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615363940571	geckodriver	INFO	Listening on 127.0.0.1:5068
+1615363943600	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofilenzJf3r"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615363948449	Marionette	INFO	Listening on port 5078
+1615363948877	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/sbase-0948aa26f1.js, line 70: Error: load css timeout : https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superui/css/ubase_9376fdcf.css
+1615363978824	Marionette	INFO	Stopped listening on port 5078
+1615364029550	geckodriver	INFO	Listening on 127.0.0.1:5215
+1615364032616	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileQgcU4x"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615364037670	Marionette	INFO	Listening on port 5226
+1615364037879	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/sbase-0948aa26f1.js, line 70: Error: load css timeout : https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/css/components/user_quit_dialog-527f3ede74.css
+1615364085245	Marionette	INFO	Stopped listening on port 5226
+5364084247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofilevUol5B"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615364090715	Marionette	INFO	Listening on port 5362
+1615364091276	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615364131074	Marionette	INFO	Stopped listening on port 5362
+1615364132647	geckodriver	INFO	Listening on 127.0.0.1:5492
+1615364135690	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofilejmdKG3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615364140589	Marionette	INFO	Listening on port 5502
+1615364141371	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js, line 1: SyntaxError: JSON.parse: unterminated string at line 1 column 61 of the JSON data
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript warning: https://g.alicdn.com/AWSC/WebUMID/1.87.0/um.js, line 7: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/WebUMID/1.87.0/um.js, line 7: WebGL context was lost.
+JavaScript error: https://files.cnblogs.com/files/jingmoxukong/jquery.engine3D.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://files.cnblogs.com/files/jingmoxukong/jquery.starfieldTagCloud.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.cnblogs.com/js/blog-common.min.js?v=JjrzxWTaXuIeNsEhLJoXrvsQufA_LW2GpCLxKml5Vgo, line 1: TypeError: n.iconName is undefined
+[GFX1]: Failed to create bitmap to make DrawTarget copy. Size: Size(1284,867) Code: 0x8899000[GFX1-]: Failed to load a program object with a program binary: gpu_cache_update renderer ANGLE (Intel(R) HD Graphics Direct3D11 vs_5_0 ps_5_0)
+
+[ERROR webrender::device::gl] Failed to load a program object with a program binary: gpu_cache_update renderer ANGLE (Intel(R) HD Graphics Direct3D11 vs_5_0 ps_5_0)
+    
+[GFX1-]: shader-cache: Failed program_binary
+[ERROR webrender_bindings::program_cache] shader-cache: Failed program_binary
+[GFX1-]: Failed to compile shader: gpu_cache_update
+
+[ERROR webrender::device::gl] Failed to compile shader: gpu_cache_update
+    
+[GFX1-]: wr_renderer_render: Shader(Compilation("gpu_cache_update", ""))
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+[GFX1-]: Failed to make render context current during destroying.
+[GFX1-]: Failed to make render context current during destroying.
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: [D3D11] Failed to init compositor with reason: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: Compositors might be mixed (5,1)
+[GFX1-]: Compositors might be mixed (1,3)
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+[GFX1-]: Failed buffer for 0, 0, 1267, 2385
+1615364751910	Marionette	INFO	Stopped listening on port 6146
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+d buffer for 0, 0, 1267, 2176
+[GFX1-]: Failed buffer for 0, 0, 1267, 2176
+[GFX1-]: DoesRecreatingCreateCPUTextureFailed
+[GFX1-]: [D3D11] CreateInputLayout failed: 0x887a0005
+[GFX1]: [D2D1] Failed to create gfx factory's D2D1 device, code: 0x887a0005
+[GFX1-]: [D3D11] failed to get compositor device attachments
+[GFX1-]: [D3D11] Failed to init compositor with reason: FEATURE_FAILURE_D3D11_INPUT_LAYOUT
+[GFX1-]: Compositors might be mixed (3,1)
+[GFX1-]: Failed buffer for 0, 0, 1284, 970
+[GFX1-]: Failed buffer for 0, 0, 1284, 970
+[GFX1-]: Failed buffer for 0, 0, 1284, 970
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.jsm, line 40: TypeError: aBrowser is null
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.jsm, line 40: TypeError: aBrowser is null
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.jsm, line 40: TypeError: aBrowser is null
+JavaScript warning: https://pos.baidu.com/s?wid=300&hei=250&di=u6390620&ltu=https%3A%2F%2Fwww.jb51.net%2Farticle%2F162915.htm&psi=8f6a49625272d2d4d0089c403d751ce2&dc=3&ti=selenium%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84url%E3%80%81%E6%BA%90%E7%A0%81%E3%80%81title%E7%9A%84%E6%96%B9%E6%B3%95_python_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&ps=0x0&drs=1&pcs=1267x867&pss=1267x4527&cfv=0&cpl=0&chi=1&cce=true&cec=GBK&tlm=1615364930&psr=1920x1080&par=1920x1040&pis=-1x-1&ccd=24&cja=false&cmi=0&col=zh-CN&cdo=-1&tcn=1615364930&dtm=HTML_POST&tpr=1615364928271&ari=2&ant=0&exps=110257,110009,111000,110760,110011,110743&prot=2&dis=0&dai=5&dri=0&ltr=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3Dw1IvccUhPLYIt0N81sjQhTnjAMII-_FatlnP64li1A3Xzm5-nDRXZUFyVWjS1oeLxsHYSxI4TBSp_y0-HQgXPa%26wd%3D%26eqid%3D92e6ffc000077ae8000000066048811d, line 137: unreachable code after return statement
+JavaScript warning: https://pos.baidu.com/s?wid=300&hei=250&di=u6390620&ltu=https%3A%2F%2Fwww.jb51.net%2Farticle%2F162915.htm&psi=8f6a49625272d2d4d0089c403d751ce2&dc=3&ti=selenium%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84url%E3%80%81%E6%BA%90%E7%A0%81%E3%80%81title%E7%9A%84%E6%96%B9%E6%B3%95_python_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&ps=0x0&drs=1&pcs=1267x867&pss=1267x4527&cfv=0&cpl=0&chi=1&cce=true&cec=GBK&tlm=1615364930&psr=1920x1080&par=1920x1040&pis=-1x-1&ccd=24&cja=false&cmi=0&col=zh-CN&cdo=-1&tcn=1615364930&dtm=HTML_POST&tpr=1615364928271&ari=2&ant=0&exps=110257,110009,111000,110760,110011,110743&prot=2&dis=0&dai=5&dri=0&ltr=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3Dw1IvccUhPLYIt0N81sjQhTnjAMII-_FatlnP64li1A3Xzm5-nDRXZUFyVWjS1oeLxsHYSxI4TBSp_y0-HQgXPa%26wd%3D%26eqid%3D92e6ffc000077ae8000000066048811d, line 137: unreachable code after return statement
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.jsm, line 40: TypeError: aBrowser is null
+1615366140803	Marionette	INFO	Stopped listening on port 5502
+oreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofilewJpJhc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615364838739	Marionette	INFO	Listening on port 6765
+1615364839132	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615364851238	Marionette	INFO	Stopped listening on port 6765
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615364875488	geckodriver	INFO	Listening on 127.0.0.1:6882
+1615364878512	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileVbz6xP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615364883331	Marionette	INFO	Listening on port 6892
+1615364883470	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615364896475	Marionette	INFO	Stopped listening on port 6892
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615365043630	geckodriver	INFO	Listening on 127.0.0.1:7179
+1615365046647	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileFDJfq3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615365052794	Marionette	INFO	Listening on port 7189
+1615365053258	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[GFX1-]: Failed to load a program object with a program binary: gpu_cache_update renderer ANGLE (Intel(R) HD Graphics Direct3D11 vs_5_0 ps_5_0)
+
+[ERROR webrender::device::gl] Failed to load a program object with a program binary: gpu_cache_update renderer ANGLE (Intel(R) HD Graphics Direct3D11 vs_5_0 ps_5_0)
+    
+[GFX1-]: shader-cache: Failed program_binary
+[ERROR webrender_bindings::program_cache] shader-cache: Failed program_binary
+[GFX1-]: Failed to compile shader: gpu_cache_update
+
+[ERROR webrender::device::gl] Failed to compile shader: gpu_cache_update
+    
+[GFX1-]: wr_renderer_render: Shader(Compilation("gpu_cache_update", ""))
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+[GFX1-]: Failed to make render context current during destroying.
+[GFX1-]: Failed to make render context current during destroying.
+[GFX1-]: Compositors might be mixed (5,3)
+out of memory: 0x0000000000001000 bytes requested
+Exiting due to channel error.
+ent
+
+[ERROR webrender::device::gl] Failed to compile shader: cs_gradient
+    
+[GFX1-]: Failed to compile shader: cs_clip_rectangle
+
+[ERROR webrender::device::gl] Failed to compile shader: cs_clip_rectangle
+    
+[GFX1-]: Failed to compile shader: cs_clip_rectangle
+
+[ERROR webrender::device::gl] Failed to compile shader: cs_clip_rectangle
+    
+[GFX1-]: Failed to compile shader: cs_clip_box_shadow
+
+[ERROR webrender::device::gl] Failed to compile shader: cs_clip_box_shadow
+    
+[GFX1-]: Failed to compile shader: cs_clip_rectangle
+
+[ERROR webrender::device::gl] Failed to compile shader: cs_clip_rectangle
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005
+[GFX1-]: Failed to compile shader: ps_clear
+
+[ERROR webrender::device::gl] Failed to compile shader: ps_clear
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_opacity
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_opacity
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_opacity
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_opacity
+    
+[GFX1-]: Failed to compile shader: ps_text_run
+
+[ERROR webrender::device::gl] Failed to compile shader: ps_text_run
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005
+[GFX1-]: Failed to compile shader: ps_clear
+
+[ERROR webrender::device::gl] Failed to compile shader: ps_clear
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: Failed to compile shader: brush_opacity
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_opacity
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005
+[GFX1-]: Failed to compile shader: ps_clear
+
+[ERROR webrender::device::gl] Failed to compile shader: ps_clear
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005
+[GFX1-]: Failed to compile shader: ps_clear
+
+[ERROR webrender::device::gl] Failed to compile shader: ps_clear
+    
+[GFX1-]: Failed to compile shader: brush_solid
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_solid
+    
+[GFX1-]: Failed to compile shader: brush_image
+
+[ERROR webrender::device::gl] Failed to compile shader: brush_image
+    
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_rectangle", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_blur", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_blur", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_border_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_rectangle", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_border_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_gradient", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_rectangle", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_rectangle", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_box_shadow", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("cs_clip_rectangle", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_opacity", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_opacity", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_text_run", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_opacity", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_clear", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image", ""))
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+[GFX1-]: Failed to make render context current during destroying.
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: [D3D11] Failed to init compositor with reason: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: Compositors might be mixed (5,1)
+[GFX1-]: Failed buffer for 0, 0, 1284, 970
+[GFX1-]: Failed buffer for -11, -8, 860, 66
+JavaScript error: , line 0: uncaught exception: out of memory
+[GFX1-]: Failed buffer for 0, 0, 1284, 970
+out of memory: 0x0000000000000078 bytes requested
+out of memory: 0x0000000000000080 bytes requested
+Hit MOZ_CRASH([unhandlable oom] js::wasm::Init) at /builds/worker/checkouts/gecko/js/src/vm/JSContext.cpp:1185
+1615366121173	geckodriver	INFO	Listening on 127.0.0.1:8190
+1615366124229	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\weizh\\AppData\\Local\\Temp\\rust_mozprofileAWHESb"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615366129812	Marionette	INFO	Listening on port 8200
+1615366130066	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615366133322	Marionette	INFO	Stopped listening on port 8200
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5B0009,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 716: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
