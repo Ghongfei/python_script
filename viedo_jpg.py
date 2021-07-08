@@ -1,7 +1,7 @@
 import os
 import cv2
 
-videos_src_path = r'/media/vtouch/下载/监控拍摄视频数据/20210615_0619/白天/20210619'
+videos_src_path = r'/media/vtouch/下载/监控拍摄视频数据/xinzao/白天/20210701'
 videos_save_path = r'/media/vtouch/项目/Crawling/baidu/out_shot/1'
 videos = os.listdir(videos_src_path)
 
@@ -30,9 +30,9 @@ for each_video in videos:
             success = False
 
         # if success == True:
-        if(frame_count % 50 == 0):
+        if(frame_count % 100 == 0):
             try:
-                cv2.imwrite(each_video_save_full_path + "/" + each_video_name + "_xinzao_tk03_" + "%06d.jpg" % frame_count, frame)
+                cv2.imwrite(each_video_save_full_path + "/" + each_video_name + "_xinzao_tk18_" + "%06d.jpg" % frame_count, frame)
             except:
                 print('error')
 

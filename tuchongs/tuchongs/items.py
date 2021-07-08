@@ -12,5 +12,6 @@ class TuchongsItem(scrapy.Item):
     pass
 
 class tu_baoc(scrapy.Item):
+
     img_url = scrapy.Field()
     name = scrapy.Field()

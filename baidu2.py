@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     word = input("请输入你要下载的图片关键词：")
     word = str(word)
-    dirpath = mkDir(r"E:\Crawling\baidu\带安全头盔")
+    dirpath = mkDir(r"/media/vtouch/项目/Crawling/baidu/带安全头盔")
 
     urls = buildUrls(word)
     index = 0

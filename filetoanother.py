@@ -19,7 +19,6 @@
 #             continue
 
 
-
 import os
 import shutil
 
@@ -37,3 +36,4 @@ for files in filelist:
         shutil.move(full_path_2, path2)
         print('已转移 %d 张！！！' % count)
         count += 1
+
