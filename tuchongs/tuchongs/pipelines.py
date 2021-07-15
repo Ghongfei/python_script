@@ -15,6 +15,10 @@ class TuchongsPipeline:
 
 
 class img_URL_baoc(object):
+
+
+
+
     def process_item(self, item, spider):
 
         # 将返回的值再用get请求返回二进制

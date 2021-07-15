@@ -8,7 +8,7 @@ class ImageSpider(scrapy.Spider):
 
     name = 'image'
 
-    allowed_domains = ['image.so.com']
+    # allowed_domains = ['image.so.com']
     # start_urls = ['http://image.so.com/']
     def start_requests(self):
 
