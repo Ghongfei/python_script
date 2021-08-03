@@ -27,7 +27,7 @@ header = {
 
 cou = 1
 for i in range(1, 101):
-    # url = 'https://api2.paixin.com/medias/1/9182095/related?page='+str(i)+'&size=40&type=similar'
+
     # url = "https://api2.paixin.com/medias/1/search?page=" + str(i) + "&size=80&type=similar"
     url = "https://api2.paixin.com/medias/1/83027246/related?page=" + str(i) + "&size=80&type=similar"
     data = requests.get(url, headers=header).json()

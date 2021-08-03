@@ -24,6 +24,8 @@ class DoubanPipeline:
     #             f.write(data)
     #     except:
     #         print('error')
+
+
     # 构造方法：创建一个excel文件以及内容模板
     def __init__(self):
 

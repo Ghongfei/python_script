@@ -1,7 +1,7 @@
 import os
 import cv2
 
-videos_src_path = r'/media/vtouch/下载/监控拍摄视频数据/xinzao/白天/20210701'
+videos_src_path = r'/media/vtouch/项目/Crawling/baidu/out_shot/监控摄像头拍摄视频/20210620_0701'
 videos_save_path = r'/media/vtouch/项目/Crawling/baidu/out_shot/1'
 videos = os.listdir(videos_src_path)
 
@@ -16,7 +16,7 @@ for each_video in videos:
 
     cap = cv2.VideoCapture(each_video_full_path)
 
-    #设置分辨率
+    # 设置分辨率
     # cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     # cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
@@ -30,9 +30,12 @@ for each_video in videos:
             success = False
 
         # if success == True:
-        if(frame_count % 100 == 0):
+        if (frame_count % 50 == 0):
             try:
-                cv2.imwrite(each_video_save_full_path + "/" + each_video_name + "_xinzao_tk18_" + "%06d.jpg" % frame_count, frame)
+                cv2.imwrite(each_video_save_full_path + "/" + each_video_name + "_xinzao_yw04_" + "%06d.jpg" % frame_count, frame)
+                # cv2.imwrite(
+                #     each_video_save_full_path + "/" + each_video_name + "_gongsiwaipai_gd01_" + "%06d.jpg" % frame_count,
+                #     frame)
             except:
                 print('error')
 
@@ -40,4 +43,3 @@ for each_video in videos:
 
     cap.release()
     print('Final frame:', frame_count)
-

@@ -17,4 +17,5 @@ class DbanSpider(scrapy.Spider):
             item['rank'] = div.xpath('./div[1]/em/text()').get()
             item['title'] = div.xpath('./div[2]/div[1]/a/span[1]/text()').get()
 
+
             yield item
